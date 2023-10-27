@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  az:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      image: az:latest
+
+    container_name: az
+    ports:
+      - "5555:5555"
+    restart: unless-stopped
